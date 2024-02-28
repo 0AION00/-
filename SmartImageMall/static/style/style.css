@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* 首頁的CSS */
+header{
+    background-color: #ececec;
+    height: 80px;
+    width: 100%;
+    position: relative;
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    .menu-1 li{
+        display: inline;
+        margin-right: 2vw;
+        font-size: 18px;
+    }
+    .menu-1{
+        position: absolute;
+        top: 1.8vw;
+        right: 5vw;
+    }
+    .cost img{
+        width: 45px;
+        position: absolute;
+        top: 1vw;
+        right: 2vw;
+    }
+    h1{
+        position: absolute;
+        top: 1vw;
+        left: 2vw;
+    }
+}
+.menu-2{
+    background-color: #F5F5F5;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li{
+        display: inline;
+        margin-right: 2vw;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+.mainlist{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 100px;
+    }
+    td{
+        text-align: center;
+        padding: 0px 10px;
+    }
+}
+.info{
+    background-color: #BDBDBD;
+    height: 60px;
+    position: relative;
+    img{
+        width: 45px;
+        margin-right: 2vw;
+    }
+    .email{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        background-image: url(../images/email.png);
+        background-repeat: no-repeat;
+        background-size: 40px;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 0.5vw;
+        right: 2vw;
+    }
+    .line{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        background-image: url(../images/line.png);
+        background-repeat: no-repeat;
+        background-size: 40px;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 0.5vw;
+        right: 8vw;
+    }
+}
+footer{
+    background-color: #424242;
+    color: #616161;
+    display: flex;
+    justify-content: center;
+}
+/* 會員註冊的CSS */
+.register{
+    background-color: #dfdcdc;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    table{
+        background-color: rgb(231, 231, 231);
+        height: 450px;
+        width: 470px;
+        border: rgb(176, 176, 176) 2px solid;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        td{
+            font-size: 30px;
+            padding: 35px 5px;
+        }
+        input{
+            height: 32px;
+            background-color: rgba(204, 203, 203, 0.479);
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        input:focus{
+            outline: rgb(176, 176, 176) 1px solid;
+            background-color:  rgba(204, 203, 203, 0.727);
+        }
+    }
+    button{
+        height: 50px;
+        width: 120px;
+        background-color: rgba(204, 203, 203, 0.479);
+        border:  rgb(176, 176, 176) 1px solid;
+        border-radius: 20px;
+        margin-top: 50px;
+        font-size: 24px;
+    }
+    button:hover{
+        background-color: rgba(204, 203, 203, 0.912);
+        border:  rgb(107, 107, 107) 1px solid;
+    }
+    button:active{
+        background-color: rgba(123, 119, 119, 0.912);
+    }
+}

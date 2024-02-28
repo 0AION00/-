@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{url_for('static', filename='js/vue.min.js')}}"></script>
+    <title>確認付款</title>
+</head>
+<body>
+    <fieldset id="app">
+        <legend>確認付款</legend>
+        <table>
+            <tr>
+                <td>商店代號</td>
+                <td>{[product.MerchantID]}</td>
+            </tr>
+            <tr>
+                <td>訂單編號</td>
+                <td>{[product.MerchantOrderNo]}</td>
+            </tr>
+            <tr>
+                <td>產品資訊</td>
+                <td>{[product.ItemDesc]}</td>
+            </tr>
+            <tr>
+                <td>金額</td>
+                <td>{[product.Amt]}</td>
+            </tr>
+            <tr>
+                <td><button>確認付款</button></td>
+            </tr>
+        </table>
+    </fieldset>
+    <script>
+        var data = {
+            'product':{
+                'MerchantOrderNo': '00000000000',
+                'Amt': 1000,
+                'ItemDesc': '測試商品',
+                'ReturnURL': '/index',
+                'ClientBackURL': '/index',
+            }
+        }
+
+        var app = new Vue(
+            {
+                delimiters:['{[',']}'],
+                data:data
+            }
+        );
+        
+        app.$mount('#app');
+    </script>
+</body>
+</html>

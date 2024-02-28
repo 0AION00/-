@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI智慧商店</title>
+    <!-- <link rel="stylesheet" href="../static/style/style.css"> -->
+    {% include 'jscstemplate.html' %}
+</head>
+<body>
+    <header>
+        <h1>AI智慧商店</h1>
+    <nav>
+        <ul class="menu-1">
+            <li><a href="/index">首頁</a></li>
+            <li><a href="#">登入</a></li>
+            <li><a href="/menberregister">註冊</a></li>
+            <li><a href="#">會員專區</a></li>
+        </ul>
+        <div class="cost"><img src="../static/images/cast.png"></a></div>
+    </nav>
+    </header>
+    <main>
+        <section id="app">
+            <section class="menu-2">
+                <ul>
+                    <li><a href="#">食物</a></li>
+                    <li><a href="#">飲料</a></li>
+                    <li><a href="#">文具</a></li>
+                </ul>
+            </section>
+            <section class="mainlist">
+                <table>
+                    <tr>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                        <td><img src="../static/images/sample.jpg"><br>產品名稱</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="info">
+                <button type="submit" v-on:click="linebtn" class="line"></button>
+                <button type="submit" v-on:click="mailtobtn" class="email"></button>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright © 2024 AI智慧商店. All rights reserved.</p>
+    </footer>
+    <script>
+        var indexdata ={
+            msg:'test',
+            mailto: {Email:'', name:'', body:''}
+        }
+
+        var functions ={
+            linebtn:function(){
+                console.log('click');
+                Swal.fire(
+                    {
+                        title: '👆請掃描QRCode👆\n官方Lineヾ(•ω•`)o',
+                        imageUrl: 'https://qr-official.line.me/sid/L/760dshrx.png',
+                        text: 'ID:@760dshrx',
+                        confirmButtonText: "加好了~~(●'◡'●)"
+                    }
+                );
+            },
+            mailtobtn:function(){
+                Swal.fire(
+                    {
+                        title: '✉聯絡我們✉',
+                        html: '<a href="mailto:example@gmail.com?subject=我有問題">電子信箱</a>'                     
+                    }
+                );
+            }
+        }
+
+        var app = new Vue(
+            {
+                delimiters:['{[',']}'],
+                data:indexdata,
+                methods:functions
+            }
+        );
+
+        app.$mount('#app');
+    </script>
+</body>
+</html>

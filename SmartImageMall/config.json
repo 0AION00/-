@@ -1,0 +1,17 @@
+{
+    "dbData":{
+        "serverName":"localhost"
+        ,"databaseName":"payDB"
+        ,"userName":"pyuser"
+        ,"password":"1111"
+    },
+    "cvData":{
+        "URL":"https://aishangdian-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/e4208ca6-b6fc-4d93-a6a6-78ec4dd9d580/detect/iterations/Iteration1/image"
+        ,"Key":"13a8a352618e461b8b9f7d73fad33ba4"
+    },
+    "LineBotKey":"eOQr/fIGwmjdNpyZ2/g8VBu4lGKTIsoEleOr8HALi57TkgXUPXGXk0mJaIlGbPAaaMBM0feliAJDxQZJDGk6zr+bV4tymaftLJtW3P+wyD60EbP9vXSQwOGzZj6CXGvMiYjsyMnYyVU0vr6TzO1FTwdB04t89/1O/w1cDnyilFU=",
+    "LinePayData":{
+        "ChannelID":"2003705291",
+        "ChannelSecretKey":"f395af91d34a51acc4900b7849fcbad1"
+    }
+}
